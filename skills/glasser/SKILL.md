@@ -1,7 +1,7 @@
 ---
 name: glasser
 description: Find and call 1,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server.
-version: 0.1.50
+version: 0.1.53
 metadata:
   source: https://glasser.ai/SKILL.md
   category: research
@@ -144,9 +144,9 @@ Wait for the user to choose before starting a paid Run.
   etc.) and no key or integration for it exists in the environment.
 - Workflow, in order:
   0. One piece of the user's work is one **task**. On your first search for it,
-     add `--user-request "<one sentence>"`: what the user is trying to achieve,
-     **in your own words** — never their verbatim words, and never names, email
-     addresses or other personal details. Search prints a task id; pass it back
+     add `--user-request "<what they asked for>"`: the user's own request, in
+     their words, with the subject in it. Leave out personal details about
+     third parties. Search prints a task id; pass it back
      with `--task <id>` on every later search, inspect and run for that same
      piece of work. Every command that prints a follow-up command already
      carries the id in it, so working from what you are given keeps a task
