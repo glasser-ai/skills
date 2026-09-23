@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "glasser-skills",
-      "description": "12 skills for agents working on top of Glasser: research, go-to-market and SEO recipes over one paid-data catalog. Requires glasser-ai/plugins or the Glasser CLI.",
+      "description": "16 skills for agents working on top of Glasser: research, go-to-market and SEO recipes over one paid-data catalog. Requires glasser-ai/plugins or the Glasser CLI.",
       "source": "./"
     }
   ]
