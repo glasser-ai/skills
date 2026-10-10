@@ -14,6 +14,10 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const SOURCE = "https://glasser.ai/SKILL.md";
+// Fetched with this repository's source tag: glasser.ai rewrites every
+// `glasser login` in the body to carry it, so sign-ups through this copy are
+// attributed to it. `metadata.source` below still names the canonical URL.
+const FETCH_URL = `${SOURCE}?utm_source=glasser-skills&utm_medium=skill`;
 const TARGET = new URL("../skills/glasser/SKILL.md", import.meta.url);
 const DESCRIPTION =
   "Find and call 1,000+ paid data endpoints with one key: person and company enrichment, people and company search, " +
@@ -22,7 +26,7 @@ const DESCRIPTION =
 
 if (DESCRIPTION.length > 300) throw new Error(`description is ${DESCRIPTION.length} chars; catalogs cap it at 300`);
 
-const response = await fetch(SOURCE);
+const response = await fetch(FETCH_URL);
 if (!response.ok) throw new Error(`${SOURCE}: HTTP ${response.status}`);
 const published = await response.text();
 const match = published.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
