@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Business skills for agents on Glasser — recipes over one paid-data catalog, not over one vendor's API",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "repository": "https://github.com/glasser-ai/skills"
   },
   "plugins": [
     {
       "name": "glasser-skills",
-      "description": "16 skills for agents working on top of Glasser: research, go-to-market and SEO recipes over one paid-data catalog. Requires glasser-ai/plugins or the Glasser CLI.",
+      "description": "17 skills for agents working on top of Glasser: research, go-to-market and SEO recipes over one paid-data catalog. Requires glasser-ai/plugins or the Glasser CLI.",
       "source": "./"
     }
   ]
