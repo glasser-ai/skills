@@ -80,6 +80,7 @@ Each skill is one directory with one `SKILL.md` and stands on its own; copy only
 | [ai-search-visibility](skills/ai-search-visibility/) | When the user wants to know whether AI search answers mention or cite their brand — in Google AI Overviews, Google AI Mode, ChatGPT, Perplexity, Gemini, Copilot — which questions trigger it, which pages get cited, who else is cited for the same questions, and how that is changing. |
 | [seo-audit](skills/seo-audit/) | When the user wants to know how their own website is doing in search and what to do about it — an audit of technical health, rankings, keywords, backlinks and competitors, followed by a prioritised action plan; or a repeat of that audit to see what has changed. |
 | [seo-find-new-keywords](skills/seo-find-new-keywords/) | Find new SEO keyword candidates from a product URL or a product/topic description. |
+| [seo-free-tool-opportunities](skills/seo-free-tool-opportunities/) | Answer whether a site can start a free trial tool and why, then shortlist suitable tools using existing search queries and verified product capabilities. |
 | [seo-new-keyword-competition](skills/seo-new-keyword-competition/) | Check whether a user-supplied keyword emerged within the past 12 months using Google Trends, then assess competition with KGR (Google allintitle result count divided by monthly search volume) and return the threshold recommendation. |
 
 ### Marketing
