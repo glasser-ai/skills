@@ -38,7 +38,7 @@ if (!version) throw new Error(`${SOURCE}: frontmatter has no version`);
 const mirrored = [
   "---",
   "name: glasser",
-  `description: ${DESCRIPTION}`,
+  `description: ${JSON.stringify(DESCRIPTION)}`,
   `version: ${version}`,
   "metadata:",
   `  source: ${SOURCE}`,

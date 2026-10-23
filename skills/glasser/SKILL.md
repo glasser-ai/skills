@@ -1,7 +1,7 @@
 ---
 name: glasser
-description: Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server.
-version: 0.1.103
+description: "Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server."
+version: 0.1.104
 metadata:
   source: https://glasser.ai/SKILL.md
   category: research
