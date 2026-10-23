@@ -1,7 +1,7 @@
 ---
 name: glasser
-description: Find and call 1,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server.
-version: 0.1.82
+description: Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server.
+version: 0.1.103
 metadata:
   source: https://glasser.ai/SKILL.md
   category: research
@@ -313,6 +313,7 @@ keep talking can fire without `--wait` and poll between replies.
 | `insufficient balance` | The Workspace cannot cover the Price. Tell the user to add funds in the console (see **Adding funds**) — do not retry |
 | `rate_limited` | The Workspace or the endpoint is at its limit. Wait `retry_after_ms` (the error carries it; the hint prints it), then retry the same command once — do not loop |
 | Transport error / timeout with a retry hint | Outcome unknown — a Run may exist. Retry with the SAME Idempotency-Key exactly as the hint prints it |
+| `COMPLETED` but the provider answered 4xx / 5xx (`provider_response.http_status`) | The provider's own error; `charge_basis.clause` says what it cost: PROVIDER_ERROR, or NO_RESULT when the Endpoint reads that status (often 404) as a miss. Read the provider's message: run the same input once more with a NEW Idempotency-Key when it says so (the same key only replays this Run), then try another Endpoint — the same text can mean a bad input or a provider outage |
 | `FAILED` with a charge shown | Legitimate when the charge clauses say so — report both the failure and the charge |
 | `Update available` notice | Finish the current task, re-run the installer, then update the installed skill as described in **Upgrading** |
 
