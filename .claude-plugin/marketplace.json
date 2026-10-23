@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Business skills for agents on Glasser — recipes over one paid-data catalog, not over one vendor's API",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "repository": "https://github.com/glasser-ai/skills"
   },
   "plugins": [

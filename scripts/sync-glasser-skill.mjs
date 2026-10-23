@@ -20,7 +20,7 @@ const SOURCE = "https://glasser.ai/SKILL.md";
 const FETCH_URL = `${SOURCE}?utm_source=glasser-skills&utm_medium=skill`;
 const TARGET = new URL("../skills/glasser/SKILL.md", import.meta.url);
 const DESCRIPTION =
-  "Find and call 1,000+ paid data endpoints with one key: person and company enrichment, people and company search, " +
+  "Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, " +
   "web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, " +
   "run, pay per call. Runs through the glasser CLI or its MCP server.";
 
