@@ -1,6 +1,6 @@
 # Jev scorecard for Amazon opportunity screening
 
-Use this reference when a request asks to score or rank product niches. Jev assesses **supplied evidence**; it does not retrieve products, reviews, fees, or search volume. Search and inspect the current Glasser TypeSafe/Jev endpoint before running it. Keep the same rubric for every candidate in one comparison.
+Use this reference when a request asks to score or rank product niches. Apply the anchored categories locally by default and label them analyst assessments. The Jev execution details below apply only when that optional service is available and its charge is authorized; missing service access must not block the research. Do not fabricate fractional scores, confidence values or a service Run when applying the rubric locally. Jev assesses **supplied evidence**; it does not retrieve products, reviews, fees, or search volume. Search and inspect the current Glasser TypeSafe/Jev endpoint before running it. Keep the same rubric for every candidate in one comparison.
 
 ## Input state
 
