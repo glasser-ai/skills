@@ -63,9 +63,11 @@ Each skill is one directory with one `SKILL.md` and stands on its own; copy only
 | [ecommerce-competitor-price-monitor](skills/ecommerce-competitor-price-monitor/) | Analyze competitor ecommerce price history through Glasser. |
 | [ecommerce-review-insights](skills/ecommerce-review-insights/) | Analyze ecommerce product reviews for customer complaints, purchase reasons, and product-page or product-improvement hypotheses. |
 | [glasser](skills/glasser/) | Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. |
+| [importer-supplier-research](skills/importer-supplier-research/) | Find candidate importers and exporters and investigate their trade activity through Glasser customs records. |
 | [investor-diligence](skills/investor-diligence/) | When an investor wants to research a company before putting money in — who runs it, how it is funded, whether the traction is real, what the risks are, and what has changed recently. |
 | [product-demand-research](skills/product-demand-research/) | When the user wants to know whether people actually have the problem a product idea solves — what they complain about, what they ask for, what they use instead, and the words they use for it — drawn from public discussion on Reddit, YouTube, TikTok, Hacker-News-style forums and Chinese Q&A platforms. |
 | [startup-analysis](skills/startup-analysis/) | When an investor wants to evaluate a startup as a potential investment — is the market big enough, is the team right, is the traction real, does it have a moat — and come away with a verdict. |
+| [tiktok-shop-research](skills/tiktok-shop-research/) | Research TikTok Shop products, shops and affiliate creators using estimated sales, related videos and product reviews through Glasser. |
 
 ### Go-to-market
 

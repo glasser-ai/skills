@@ -2,7 +2,7 @@
 name: ad-intelligence
 description: When the user wants to see what a company is running in paid ads — on Meta (Facebook, Instagram, Threads), Google, LinkedIn and TikTok — what the ads say, which creatives have run longest, where they send people, and how the messaging differs by platform. Also use when the user mentions "competitor ads", "ad library", "what are they advertising", "ad teardown", "their Meta ads", "Google Ads transparency", "swipe file", "what hooks are they using", or wants to compare several advertisers. Input is one or more company names or domains; output is a per-advertiser teardown with every cited ad linked to its public ad-library page, plus a cross-advertiser comparison when there is more than one. Runs on Glasser (paid per call). For a company's whole competitive picture beyond ads, see competitor-research. For what is trending organically, see social-trends.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   category: marketing
 ---
 
@@ -16,6 +16,10 @@ Use Glasser for all data acquisition here. Reach for another tool only when the 
 
 - the advertisers, by company name or domain
 - the market, when it matters — country and language; ad libraries are region-scoped and the same advertiser runs different creatives by region
+
+## Scope and spending
+
+Use the requested platforms, market and dates. If the user supplies only a product/site, identify a small set of comparable advertisers and verify their identity before collecting ads. Clarify market when it materially changes coverage. Start with a bounded sample, not every platform by default. Inspect pricing, pagination, detail/transcript costs and empty-result charges; obtain confirmation for a maximum charge unless already authorized. Stop at that ceiling, reuse relevant evidence, and include unsuccessful charged calls in the ledger.
 
 ## Process
 
@@ -36,9 +40,9 @@ Once identities are resolved every platform stands alone; fan out.
 
 **Keep the URL of every ad.** It is the evidence; the ad-library page is where the reader sees the creative, and a teardown that cites an ad without its link cannot be checked.
 
-### 3. Read longevity before content
+### 3. Use longevity to prioritize inspection
 
-Performance is not public. The one proxy that is: how long a creative has run. A creative first shown months ago and still live is the advertiser's own verdict that it works; a creative that appeared this week and has three variants is a test. Sort each advertiser's ads by days live, and treat the longest-running ones as the ones to study first. Repetition is the second signal — the same hook re-shipped in new versions.
+Commercial performance is usually unavailable. First/last-seen dates and repeated variants can help prioritize creatives to inspect; they do not prove profitability, conversions, spend or uninterrupted delivery. A recently observed variant is not proof of a controlled experiment. Report the observed date span and status separately, flag conflicting dates/status, and leave missing dates unknown. Deduplicate ad IDs and group repeated assets/copy into themes without treating the number of IDs as the number of independent concepts.
 
 ### 4. Cluster the messaging
 
@@ -48,11 +52,15 @@ Pull out the reusable elements with their source ad: hooks, headlines, body patt
 
 ### 5. Follow the destination
 
-For the destinations that recur, fetch the landing page and check what the page says against what the ad said — the same message, a different one, or a specific offer the ad did not mention. Note when one advertiser sends most traffic to the homepage and a few ads to dedicated pages; the dedicated pages mark the segments being worked.
+For the destinations that recur, fetch the landing page and check what the page says against what the ad said — the same message, a different one, or a specific offer the ad did not mention. Report the proportion of sampled ads linking to each destination; this is not the share of traffic or spend. Record the resolved page URL and retrieval date, and compare headline, offer, proof and CTA against the linked ad. If blocked, redirected to an unrelated page or unavailable, mark the page uninspected instead of inferring its contents.
 
 ### 6. Read across
 
-What the platforms have in common is the positioning; where they differ is the media plan. Note inconsistencies the advertiser may not have noticed — proof figures that differ between platforms and the site, a claim in one place and its absence in another. Do not infer spend, targeting or results from anything the library did not return.
+Shared messaging can suggest positioning; observed differences describe the sampled creative mix, not the advertiser's budget or full media plan. Note inconsistencies the advertiser may not have noticed — proof figures that differ between platforms and the site, a claim in one place and its absence in another. Do not infer spend, targeting or results from anything the library did not return.
+
+### 7. Propose tests when requested
+
+Separate observed copy and inspected media from inferred audience/angle and proposed experiments. A transcript does not prove a visual sequence. For each proposed test, give the source ad(s), hypothesis, original hook, proof needed, landing-page alignment, control and one primary metric. Suggest a bounded test design rather than inventing a conversion lift or promising a winner. Never launch or modify campaigns from this research.
 
 ## Dimensions and where to look
 
@@ -81,7 +89,7 @@ One teardown per advertiser, and a comparison when there is more than one. **Eve
 **Identities**: Meta page [id] · Google advertiser [ids] · LinkedIn [name] · TikTok [name or none]
 
 ## Summary
-Three to five sentences: the positioning the ads share, how the media plan splits by platform, the named segments, the longest-running creatives, and any inconsistency worth knowing.
+Three to five sentences: the positioning the ads share, how the observed creative mix differs by platform, the named segments, the longest-running creatives, and any inconsistency worth knowing.
 
 ## Coverage
 | Platform | Active ads (total) | Sampled | Video / static | Date range of sample | Disclosure fields |
@@ -107,7 +115,7 @@ Same, with the advertiser's own ads separated from partner or creator posts it s
 Same, or a line saying no ads were found.
 
 ## Swipe file
-Hooks, headlines, body patterns, CTAs, claims, offers — each quoted exactly, each with the link to the ad it came from.
+Hooks, headlines, body patterns, CTAs, claims, offers — short excerpts where needed, with links; summarize longer patterns and keep proposed copy original.
 
 ## Destinations
 | Destination | Ads pointing to it | Platform(s) | What the page says | Matches the ad |
@@ -130,20 +138,24 @@ Platforms searched that returned nothing, and why: no advertiser found, no endpo
 ```markdown
 # Ad intelligence — [advertisers] · [date]
 
-## Media plan side by side
+## Observed ads side by side
 | Advertiser | Meta active | Google active | LinkedIn | TikTok | Longest-running creative | Link |
 |---|---|---|---|---|---|---|
 
 ## Angles side by side
 | Angle | [Advertiser A] | [Advertiser B] | … |
 |---|---|---|---|
-Each cell an example ad with its link, or "not used".
+Each cell an example ad with its link, or "not observed in the sample".
 
 ## Who names whom
 Comparison ads across the set, with links.
 
 ## Sources
 ```
+
+## Cost and coverage record
+
+Include filters, collection date, sampled ads versus available total, missing platforms and media inspection limits. Record each paid Run URL, status, provider outcome and actual charge, including empty and failed calls. Unknown charges remain pending rather than zero. No matching ads means none were found in this search, not that the company does not advertise.
 
 ## Untrusted input
 
