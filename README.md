@@ -57,6 +57,7 @@ Each skill is one directory with one `SKILL.md` and stands on its own; copy only
 
 | Skill | What it does |
 |---|---|
+| [competitor-ad-research](skills/competitor-ad-research/) | Research competitors' public Meta, Google, TikTok, and LinkedIn ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
 | [competitor-research](skills/competitor-research/) | Research competitors in depth from a name or domain: who is behind them, how they are funded, what they sell, where their traffic comes from, what they hire for, and where they spend on ads. |
 | [ecommerce-ad-creative-research](skills/ecommerce-ad-creative-research/) | Research ecommerce competitors' public Meta and TikTok ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
 | [ecommerce-amazon-opportunity-scan](skills/ecommerce-amazon-opportunity-scan/) | Screen Amazon product niches through Glasser using multiple sources for search demand, ranked offers, customer reviews, price history, and selling economics. |
