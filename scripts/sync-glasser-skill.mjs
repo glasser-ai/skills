@@ -42,7 +42,7 @@ const mirrored = [
   `version: ${version}`,
   "metadata:",
   `  source: ${SOURCE}`,
-  "  category: research",
+  "  category: core",
   "---",
   body,
 ].join("\n");

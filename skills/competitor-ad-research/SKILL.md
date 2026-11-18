@@ -2,8 +2,8 @@
 name: competitor-ad-research
 description: Research competitors' public Meta, Google, TikTok, and LinkedIn ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. Use for competitor ad-library research, product-category creative briefs, or ecommerce ad-angle analysis; not for campaign performance reporting or launching ads.
 metadata:
-  version: "0.1.0"
-  category: research
+  version: "0.1.1"
+  category: marketing
 ---
 
 # Competitor ad research

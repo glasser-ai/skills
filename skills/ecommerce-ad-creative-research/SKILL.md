@@ -2,8 +2,8 @@
 name: ecommerce-ad-creative-research
 description: Research ecommerce competitors' public Meta and TikTok ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. Use for competitor ad-library research, product-category creative briefs, or ecommerce ad-angle analysis; not for campaign performance reporting or launching ads.
 metadata:
-  version: "0.2.0"
-  category: research
+  version: "0.2.1"
+  category: ecommerce
 ---
 
 # Ecommerce ad creative research

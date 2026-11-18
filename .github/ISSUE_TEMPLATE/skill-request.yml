@@ -45,9 +45,12 @@ body:
     attributes:
       label: Category
       options:
-        - research
-        - gtm
         - seo
+        - marketing
+        - sales
+        - ecommerce
+        - research
+        - investment
         - other
     validations:
       required: true

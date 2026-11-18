@@ -2,8 +2,8 @@
 name: tiktok-shop-research
 description: Research TikTok Shop products, shops and affiliate creators using estimated sales, related videos and product reviews through Glasser. Use for product discovery, competitor shop comparisons and creator shortlists; not general TikTok trends or ad-account management.
 metadata:
-  version: "0.1.0"
-  category: research
+  version: "0.1.1"
+  category: ecommerce
 ---
 
 # TikTok Shop research

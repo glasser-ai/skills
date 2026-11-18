@@ -2,8 +2,8 @@
 name: importer-supplier-research
 description: Find candidate importers and exporters and investigate their trade activity through Glasser customs records. Use for overseas buyer discovery, supplier research and trade-market comparisons; not email outreach or definitive customs classification.
 metadata:
-  version: "0.1.0"
-  category: research
+  version: "0.1.1"
+  category: sales
 ---
 
 # Importer and supplier research
