@@ -1,7 +1,7 @@
 ---
 name: glasser
 description: "Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. Search, inspect the price, run, pay per call. Runs through the glasser CLI or its MCP server."
-version: 0.1.104
+version: 0.1.142
 metadata:
   source: https://glasser.ai/SKILL.md
   category: core
@@ -41,9 +41,10 @@ whether a terminal exists. The wrong setup cannot work.
   (ChatGPT → Codex, Gemini → Gemini CLI, Claude → Claude Code).
 
 - **Local coding agent** (Claude Code, Codex, Cursor, Copilot, Gemini CLI,
-  OpenClaw, Hermes on the user's machine): the human authorized the whole
-  flow by pasting this. If your runtime asks permission for shell commands,
-  request it ONCE and work straight through. Continue to **Setup**.
+  OpenClaw, Hermes on the user's machine; Grok Bot on its own persistent
+  cloud computer): the human authorized the whole flow by pasting this. If
+  your runtime asks permission for shell commands, request it ONCE and work
+  straight through. Continue to **Setup**.
 
 - **Sandboxed agent** (cloud container, restricted egress): run
   `curl -sI https://api.glasser.ai/health` first. A proxy 403, DNS failure
@@ -76,7 +77,7 @@ for future sessions. Do this only during setup or CLI upgrades.
 
 ## Authentication
 
-Run `glasser balance`. Exit 0 means authentication works; continue to
+Run `glasser balance --json`. Exit 0 means authentication works; continue to
 **First run**. A missing or rejected Key needs one. Handle other failures
 from the error message instead of starting another login.
 
@@ -105,7 +106,7 @@ it lives on the machine the CLI ran on, and lasts as long as that machine does.
 Once login succeeds, use the available balance in its output and continue to
 **First run**, unless login warns that `GLASSER_API_KEY` overrides the saved
 Key or the summary has no available balance. In either case, run
-`glasser balance` in the environment subsequent commands will use. Login's
+`glasser balance --json` in the environment subsequent commands will use. Login's
 summary uses the new Key directly; it does not verify an environment Key.
 
 If that check rejects an environment Key, another login will not fix it.
@@ -132,22 +133,29 @@ Login's balance is not usable evidence for commands that use a rejected Key.
 Once setup is finished, if the user already gave you a task, continue it.
 For a setup-only request, reply briefly in the user's language: confirm
 Glasser is ready, report the available balance from login or the balance
-check, then offer three ready-to-send task prompts, one per bullet.
-Use a conversational lead-in that explains how the suggestions can help
+check, then recommend one small, ready-to-send example task.
+Use a conversational lead-in that explains how the suggestion can help
 the user, rather than a generic list heading. Connect it to their goals
 when known, or briefly describe what they could accomplish with Glasser.
 
-Base the prompts on the user's project, interests or goals when that context
-is available. Otherwise, choose three varied examples from Glasser's
-capabilities. Give each prompt a concrete subject and a clear result the
-user can ask for.
+Base the task on the user's project, interests or goals when that context
+is available. Otherwise, choose one example from Glasser's
+capabilities. Give it a concrete subject and a clear result the user can ask for.
 
 For both completed and blocked setup, omit Workspace names/slugs, Key
 labels/values/prefixes, and installation details such as versions, paths or
 package-manager output. Name a configuration variable when it explains the
 blocker. Report useful status, not a transcript of the setup commands.
-Setup is not approval to spend: wait for the user to choose before starting
-a paid Run.
+
+When a balance response includes `first_run_reward.description`, relay that
+message in the user's language alongside the task suggestion. If absent,
+omit rewards. Use `glasser balance --json` when checking balance through the
+CLI. Reuse the setup response; do not call balance just for rewards or delay
+an existing task.
+
+For a setup-only request, finish with the task suggestion and wait for the
+user to choose it. Then follow the normal inspect, pricing and approval rules
+before a paid Run.
 
 ## Upgrading
 
@@ -223,6 +231,10 @@ version — do not block the task on an upgrade check.
      queries) — the charge rule may read the input, so volume parameters
      can change what a call costs. Start small; raise only when the user
      needs more.
+     Follow the inspected `input_schema`: some Endpoints take an object;
+     native task submissions take an array of task objects. A completed
+     submission returns receipts and task IDs. Use the matching task-result
+     Endpoint to retrieve the data, with a task ID from the same Workspace.
   3. `glasser run -p <provider> -e <endpoint> -i '<json>'` — execute.
   4. Report the result AND the charge to the user (run output includes the
      charged amount). Every Run also prints a `Run URL` (the `run_url` field
@@ -280,6 +292,14 @@ Facts that matter when scripting:
 - In `-j` mode, stdout is data only; parse stderr for the error object.
 - For large outputs, prefer `-o <file>` and read the file selectively —
   dumping a full provider payload into your context wastes it.
+- If a Run has `response_file`, check its `state` and `body_field`.
+  If its state is `link_pending`, read the same Run to prepare the link; do not
+  execute the Endpoint again. `-o` makes this read automatically, downloads an
+  available complete JSON file and verifies its byte count
+  and SHA-256. `output: null` alone does not mean an empty result. Download
+  links expire after at most one hour; `runs get` refreshes them during the
+  file's 7-day availability period without another execution or charge.
+  Provider-native download links remain part of the Provider's own output.
 - Money is always an **exact decimal string** (e.g. `"0.0125"`), never a
   float. Do not do float arithmetic on it.
 - Env: `GLASSER_API_KEY`, `GLASSER_API_BASE_URL` (default
@@ -318,6 +338,21 @@ keep talking can fire without `--wait` and poll between replies.
 | `Update available` notice | Finish the current task, re-run the installer, then update the installed skill as described in **Upgrading** |
 
 ## Running safely
+
+For a fresh independent lookup, use a fresh random UUID, including repeated
+lookups with identical inputs on the same day. Reuse the original key only
+when recovering that same execution after an uncertain outcome. Changing a
+Task does not reset a key. Read an existing Run for an explicit historical
+request and retain its observation time.
+
+MCP and Solution results expose `request_charge`: its `created_run_ids` identify
+new work, `replayed_run_ids` identify existing work, and `charge_usd` counts only
+newly created Runs for that request. It is null while a created Run is unsettled
+or its admission source is unknown. A replay or free read adds zero even when
+the original Run has a positive historical Charge. Retain created Run ids across
+polls and count each settled Run once in the user's work; a free poll does not
+erase the Charge of an earlier creation. If these fields are absent, do not
+infer new spending from the historical Run Charge.
 
 - `run` prints `Charge: $X (rule)` — the amount billed under the
   endpoint's charge rule. Report that number to the user.
