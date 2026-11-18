@@ -4,7 +4,7 @@ description: "Find and call 2,000+ paid data endpoints with one key: person and 
 version: 0.1.104
 metadata:
   source: https://glasser.ai/SKILL.md
-  category: research
+  category: core
 ---
 
 # Glasser

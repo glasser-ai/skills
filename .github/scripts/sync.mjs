@@ -25,12 +25,17 @@ const PREREQ_FILE = join(ROOT, "templates/glasser-prereq.md");
 
 const CHECK = process.argv.includes("--check");
 
-// Display names for categories. A category not listed here is shown with its
-// first letter capitalised, so adding a category needs no change to this file.
+// Display names for categories, in the order the README shows them. A category
+// not listed here is shown with its first letter capitalised, after the listed
+// ones, so adding a category needs no change to this file.
 const CATEGORY_TITLES = {
-  research: "Research",
-  gtm: "Go-to-market",
+  core: "Core",
   seo: "SEO/GEO",
+  marketing: "Marketing",
+  sales: "Sales",
+  ecommerce: "E-commerce",
+  research: "Research",
+  investment: "Investment",
 };
 
 function frontmatter(text) {

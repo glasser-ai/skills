@@ -2,8 +2,8 @@
 name: prospect-list
 description: When the user wants a list of companies to sell to and the people to contact at them — from an ICP, a set of filters, a known source such as an investor portfolio or a directory, or a list of company names. Also use when the user mentions "find customers", "lead list", "prospect list", "target accounts", "build a TAM", "who should we reach out to", "find contacts at these companies", "decision makers at", or "find me [title] at [kind of company]". Input is the ICP or the source; output is a company table, a contact table with verified emails, and a cost record. Runs on Glasser (paid per call) and is the most expensive skill here — it sizes and samples before spending. For a deep read on one company, see investor-diligence. For rivals to the user's own product, see competitor-research.
 metadata:
-  version: "0.1.0"
-  category: gtm
+  version: "0.1.1"
+  category: sales
 ---
 
 # Prospect list

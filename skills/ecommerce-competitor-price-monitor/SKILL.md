@@ -2,8 +2,8 @@
 name: ecommerce-competitor-price-monitor
 description: Analyze competitor ecommerce price history through Glasser. Match exact Amazon product variants, detect abnormal price increases and decreases, measure their dates and observed duration, explain the surrounding pattern, and optionally compare current merchant offers or propose monitoring thresholds. Use for historical pricing, promotions, repricing signals, and competitor price monitoring.
 metadata:
-  version: "0.1.0"
-  category: research
+  version: "0.1.1"
+  category: ecommerce
 ---
 
 # Ecommerce competitor price monitor

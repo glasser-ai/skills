@@ -53,28 +53,11 @@ Each skill is one directory with one `SKILL.md` and stands on its own; copy only
 ## Skills
 
 <!-- SKILLS:START -->
-### Research
+### Core
 
 | Skill | What it does |
 |---|---|
-| [competitor-ad-research](skills/competitor-ad-research/) | Research competitors' public Meta, Google, TikTok, and LinkedIn ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
-| [competitor-research](skills/competitor-research/) | Research competitors in depth from a name or domain: who is behind them, how they are funded, what they sell, where their traffic comes from, what they hire for, and where they spend on ads. |
-| [ecommerce-ad-creative-research](skills/ecommerce-ad-creative-research/) | Research ecommerce competitors' public Meta and TikTok ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
-| [ecommerce-amazon-opportunity-scan](skills/ecommerce-amazon-opportunity-scan/) | Screen Amazon product niches through Glasser using multiple sources for search demand, ranked offers, customer reviews, price history, and selling economics. |
-| [ecommerce-competitor-price-monitor](skills/ecommerce-competitor-price-monitor/) | Analyze competitor ecommerce price history through Glasser. |
-| [ecommerce-review-insights](skills/ecommerce-review-insights/) | Analyze ecommerce product reviews for customer complaints, purchase reasons, and product-page or product-improvement hypotheses. |
 | [glasser](skills/glasser/) | Find and call 2,000+ paid data endpoints with one key: person and company enrichment, people and company search, web, news, maps, scholar and shopping search, SEO, social media, US property data, scraping. |
-| [importer-supplier-research](skills/importer-supplier-research/) | Find candidate importers and exporters and investigate their trade activity through Glasser customs records. |
-| [investor-diligence](skills/investor-diligence/) | When an investor wants to research a company before putting money in — who runs it, how it is funded, whether the traction is real, what the risks are, and what has changed recently. |
-| [product-demand-research](skills/product-demand-research/) | When the user wants to know whether people actually have the problem a product idea solves — what they complain about, what they ask for, what they use instead, and the words they use for it — drawn from public discussion on Reddit, YouTube, TikTok, Hacker-News-style forums and Chinese Q&A platforms. |
-| [startup-analysis](skills/startup-analysis/) | When an investor wants to evaluate a startup as a potential investment — is the market big enough, is the team right, is the traction real, does it have a moat — and come away with a verdict. |
-| [tiktok-shop-research](skills/tiktok-shop-research/) | Research TikTok Shop products, shops and affiliate creators using estimated sales, related videos and product reviews through Glasser. |
-
-### Go-to-market
-
-| Skill | What it does |
-|---|---|
-| [prospect-list](skills/prospect-list/) | When the user wants a list of companies to sell to and the people to contact at them — from an ICP, a set of filters, a known source such as an investor portfolio or a directory, or a list of company names. |
 
 ### SEO/GEO
 
@@ -91,9 +74,41 @@ Each skill is one directory with one `SKILL.md` and stands on its own; copy only
 | Skill | What it does |
 |---|---|
 | [ad-intelligence](skills/ad-intelligence/) | When the user wants to see what a company is running in paid ads — on Meta (Facebook, Instagram, Threads), Google, LinkedIn and TikTok — what the ads say, which creatives have run longest, where they send people, and how the messaging differs by platform. |
+| [competitor-ad-research](skills/competitor-ad-research/) | Research competitors' public Meta, Google, TikTok, and LinkedIn ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
 | [influencer-prospecting](skills/influencer-prospecting/) | When the user wants creators to work with — influencers, KOLs, UGC creators, affiliates — for a product or category, across TikTok, Instagram, YouTube, X, Threads and LinkedIn, or Douyin, Xiaohongshu, Bilibili, Kuaishou and Weibo for China. |
 | [social-trends](skills/social-trends/) | When the user wants to know what is trending on social platforms — right now across a whole platform, or inside a category they care about — and how those trends move: Douyin, Xiaohongshu, Weibo, Bilibili, Kuaishou and Zhihu on the China side; TikTok, YouTube, Instagram, Reddit and X elsewhere. |
 | [youtube-kol-finder](skills/youtube-kol-finder/) | Find and qualify YouTube creators for product partnerships, sponsorships, or affiliate campaigns from a product description or website, a creator brief, or reference channels. |
+
+### Sales
+
+| Skill | What it does |
+|---|---|
+| [importer-supplier-research](skills/importer-supplier-research/) | Find candidate importers and exporters and investigate their trade activity through Glasser customs records. |
+| [prospect-list](skills/prospect-list/) | When the user wants a list of companies to sell to and the people to contact at them — from an ICP, a set of filters, a known source such as an investor portfolio or a directory, or a list of company names. |
+
+### E-commerce
+
+| Skill | What it does |
+|---|---|
+| [ecommerce-ad-creative-research](skills/ecommerce-ad-creative-research/) | Research ecommerce competitors' public Meta and TikTok ads through Glasser, identify observable creative patterns, and propose evidence-linked ad tests. |
+| [ecommerce-amazon-opportunity-scan](skills/ecommerce-amazon-opportunity-scan/) | Screen Amazon product niches through Glasser using multiple sources for search demand, ranked offers, customer reviews, price history, and selling economics. |
+| [ecommerce-competitor-price-monitor](skills/ecommerce-competitor-price-monitor/) | Analyze competitor ecommerce price history through Glasser. |
+| [ecommerce-review-insights](skills/ecommerce-review-insights/) | Analyze ecommerce product reviews for customer complaints, purchase reasons, and product-page or product-improvement hypotheses. |
+| [tiktok-shop-research](skills/tiktok-shop-research/) | Research TikTok Shop products, shops and affiliate creators using estimated sales, related videos and product reviews through Glasser. |
+
+### Research
+
+| Skill | What it does |
+|---|---|
+| [competitor-research](skills/competitor-research/) | Research competitors in depth from a name or domain: who is behind them, how they are funded, what they sell, where their traffic comes from, what they hire for, and where they spend on ads. |
+| [product-demand-research](skills/product-demand-research/) | When the user wants to know whether people actually have the problem a product idea solves — what they complain about, what they ask for, what they use instead, and the words they use for it — drawn from public discussion on Reddit, YouTube, TikTok, Hacker-News-style forums and Chinese Q&A platforms. |
+
+### Investment
+
+| Skill | What it does |
+|---|---|
+| [investor-diligence](skills/investor-diligence/) | When an investor wants to research a company before putting money in — who runs it, how it is funded, whether the traction is real, what the risks are, and what has changed recently. |
+| [startup-analysis](skills/startup-analysis/) | When an investor wants to evaluate a startup as a potential investment — is the market big enough, is the team right, is the traction real, does it have a moat — and come away with a verdict. |
 <!-- SKILLS:END -->
 
 ## How the pieces fit

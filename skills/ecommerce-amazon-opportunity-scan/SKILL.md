@@ -2,8 +2,8 @@
 name: ecommerce-amazon-opportunity-scan
 description: Screen Amazon product niches through Glasser using multiple sources for search demand, ranked offers, customer reviews, price history, and selling economics. Use for niche discovery, reference-ASIN comparisons and evidence-backed research priorities; do not turn a preliminary score into a launch recommendation.
 metadata:
-  version: "0.2.0"
-  category: research
+  version: "0.2.1"
+  category: ecommerce
 ---
 
 # Amazon product opportunity scan

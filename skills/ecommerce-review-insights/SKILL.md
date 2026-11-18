@@ -2,8 +2,8 @@
 name: ecommerce-review-insights
 description: Analyze ecommerce product reviews for customer complaints, purchase reasons, and product-page or product-improvement hypotheses. Use for Amazon ASIN review research and competitor review mining through Glasser; distinguish small recent samples from representative customer trends.
 metadata:
-  version: "0.1.0"
-  category: research
+  version: "0.1.1"
+  category: ecommerce
 ---
 
 # Ecommerce review insights

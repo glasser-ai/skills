@@ -39,7 +39,7 @@ metadata:
 - `name` matches the directory name: 1 to 64 characters, lowercase letters, digits and single hyphens, no leading or trailing hyphen.
 - `description` is 1 to 1024 characters on the same line as `description:`, with no YAML folded (`>`) or literal (`|`) block. It is what the agent matches against, so it carries the trigger phrases, the input, the output, and the neighbouring skills to route away from.
 - `metadata.version` is `x.y.z`. Bump it on every shipped change to the skill.
-- `metadata.category` is a lowercase slug; it groups the README table. Current categories: `research`, `gtm`, `seo`. A new category is fine, the table adapts.
+- `metadata.category` is a lowercase slug; it groups the README table. Current categories: `core` (the `glasser` mirror only), `seo`, `marketing`, `sales`, `ecommerce`, `research`, `investment`. A new category is fine, the table adapts; add it to `CATEGORY_TITLES` in `.github/scripts/sync.mjs` to set its display name and position.
 
 ## The prerequisite block
 
